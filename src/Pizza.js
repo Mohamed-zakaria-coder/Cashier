@@ -9,9 +9,10 @@ const Pizza = (props) => {
             src={props.img}
             onClick={() => props.click(props.id)}
             className="pizza-img"
+          
           />
         </div>
-        <p>{props.name}</p>
+        <p>{`${props.name[0].toUpperCase()}${props.name.slice(1)}`}</p>
         <div className="select-holder">
           <div className="name-price">
             {props.size.map((e) => {

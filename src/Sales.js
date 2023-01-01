@@ -11,7 +11,7 @@ const Sales = () => {
           .products
           .map(bill => bill.product_id)
         const billProducts = productIds.map(productId => {
-          return (Data.filter(product => product.id == productId)[0])
+          return (Data.filter(product => product.id === productId)[0])
         })
         return (
           <tr className="table-body" key={Math.random()}>

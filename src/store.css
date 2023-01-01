@@ -10,7 +10,6 @@ a {
 
 .container {
   display: flex;
-  padding: 5px;
   /* height: 100vh; */
 }
 
@@ -21,13 +20,14 @@ a {
 .img-container {
   display: flex;
   justify-content: center;
-  /* align-items:center; */
+  /* align-items:center; */  
 }
 /* Modal And Pizza */
 .pizza-img {
   max-width: 70px;
   height: 70px;
   border-radius: 50%;
+  object-fit: cover;
 }
 p {
   color: #777;
@@ -146,6 +146,26 @@ p {
   column-gap: 15px;
   justify-items: center;
 }
+.pizza-parent{
+  border: none;
+}
+.each {
+  box-shadow: 0 0 0 0.1px #777;
+  border-radius: 30px;
+  background-color: white;
+  width: 130px;
+  padding: 10px;
+  min-height: 155px;
+  display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.pizza-parent .each p{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  
+}
 .choose-sort-parent{
 display: flex;
 justify-content: space-between;
@@ -162,13 +182,6 @@ margin: 5px 20px;
   background-color: rgba(221, 221, 221, 0.26);
 }
 
-.each {
-  background-color: white;
-  width: 130px;
-  border-radius: 30px;
-  padding: 10px;
-  min-height: 155px;
-}
 .name-price {
   text-align: center;
   font-size: 16px;
@@ -291,6 +304,10 @@ margin: 5px 20px;
 .icon {
   font-size: 35px;
 }
+.home-icon{
+  color: black;
+
+}
 .link-container {
   display: flex;
   flex-direction: column;
@@ -303,7 +320,7 @@ margin: 5px 20px;
 .active {
   background-color: #ff004f;
   border-radius: 15px;
-  color: white;
+  color: black;
 } /* NavBar */
 /* Start Sales */
 .sales-parent {
@@ -388,6 +405,7 @@ tr td{
   background-color: white;
   margin-bottom: 10px;
   cursor: pointer;
+  /* box-shadow: 0 0 0 0.1px; */
 }
 .each-category:hover{
   background-color: gold;
@@ -619,6 +637,9 @@ tr td{
   flex-direction: row;
   justify-content: space-around;
 }
+a:visited, a:active, a:hover{
+  color: black;
+}
 .categories-parent{
   display: grid;
   grid-template-columns: repeat(3, auto);
@@ -646,14 +667,18 @@ tr td{
   top: 10px;
   right: 20px;
   display: block;
-
+  background-color: rgb(0, 0, 0);
+  padding: 6px;
 }
 .out-line-menu{
-  height: 40px;
-  width: 20px;
-  color:#ff004f;
+  /* height: 0px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: 20px; */
+  font-size: 22px;
+  color:#ff0051;
   cursor: pointer;
-  margin-left: 6px;
   animation-name: change-color;
   animation-duration: 3s;
   /* animation-timing-function: linear; */
@@ -673,6 +698,10 @@ tr td{
 }
 }
 @media only screen and (max-width: 500px){
+  .categories-parent{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+  }
   .modal-container{
     width: 95%;
   }
@@ -698,13 +727,13 @@ tr td{
 }
 @keyframes change-color{
   0% {
-    color: blue;
+    color: #c5154d;
   }
   50%{
     color: #ff004f;
   }
   100%{
-    color: blue;
+    color: #c5154d;
   }
 }
 

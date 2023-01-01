@@ -106,9 +106,9 @@ const Home = (props) => {
 
   const category = categories.map(category => {
     return (
-      <div className='each-category' onClick={() => filterProducts(category.id)}>
+      <div key={category.id} className='each-category' onClick={() => filterProducts(category.id)}>
         <div>{category.icon}</div>
-        <div>{category.name}</div>
+        <div>{`${category.name[0].toUpperCase()}${category.name.slice(1)}`}</div>
       </div>
     )
   })

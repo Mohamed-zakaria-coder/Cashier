@@ -1,5 +1,4 @@
 import React from 'react';
-import Data from './Data';
 const Modal = (props) => {
   return (
     <div className='modal-container'>
@@ -18,7 +17,7 @@ const Modal = (props) => {
                   .size
                   .map((e) => {
                     return (
-                      <option value={e.price}>Size: {e.name}
+                      <option key= {props.id} value={e.price}>Size: {e.name}
                         - Price: {e.price}$
                       </option>
 

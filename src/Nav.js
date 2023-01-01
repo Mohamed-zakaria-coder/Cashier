@@ -10,7 +10,7 @@ const Nav = (props) => {
       <div className="nav-container">
         <FaPizzaSlice className="nav-icon" />
         <NavLink to="/Home" className="link-container">
-          <AiOutlineHome className="icon" />
+          <AiOutlineHome className="icon home-icon"/>
           <div> Menu</div>
         </NavLink>
         <NavLink to="/Sales" className="link-container">
