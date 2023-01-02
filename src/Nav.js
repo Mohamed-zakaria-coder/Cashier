@@ -1,16 +1,16 @@
-import React from 'react';
-import { FaPizzaSlice } from 'react-icons/fa';
-import { AiOutlineHome } from 'react-icons/ai';
-import { FcSalesPerformance } from 'react-icons/fc';
-import { FcStatistics } from 'react-icons/fc';
-import { NavLink } from 'react-router-dom';
+import React from "react";
+import { FaPizzaSlice } from "react-icons/fa";
+import { AiOutlineHome } from "react-icons/ai";
+import { FcSalesPerformance } from "react-icons/fc";
+import { FcStatistics } from "react-icons/fc";
+import { NavLink } from "react-router-dom";
 const Nav = (props) => {
   return (
     <div className="parent">
       <div className="nav-container">
         <FaPizzaSlice className="nav-icon" />
         <NavLink to="/Home" className="link-container">
-          <AiOutlineHome className="icon home-icon"/>
+          <AiOutlineHome className="icon home-icon" />
           <div> Menu</div>
         </NavLink>
         <NavLink to="/Sales" className="link-container">

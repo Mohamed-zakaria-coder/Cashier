@@ -1,15 +1,14 @@
-import React from 'react';
+import React from "react";
 
 const Pizza = (props) => {
-  return (    
-   <div className="pizza-parent">
+  return (
+    <div className="pizza-parent">
       <div className="each">
         <div className="img-container">
           <img
             src={props.img}
             onClick={() => props.click(props.id)}
             className="pizza-img"
-          
           />
         </div>
         <p>{`${props.name[0].toUpperCase()}${props.name.slice(1)}`}</p>
@@ -26,7 +25,6 @@ const Pizza = (props) => {
         </div>
       </div>
     </div>
-  
   );
 };
 
