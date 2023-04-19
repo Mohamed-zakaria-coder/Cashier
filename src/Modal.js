@@ -4,13 +4,13 @@ const Modal = (props) => {
     <div className="modal-container">
       <div className="one" onClick={() => null}>
         <span className="close" onClick={() => props.handleClose()}>
-          X
+          ×
         </span>
         <div>
           <div>
             <div className="img-container">
-              <img src={props.selectedPizza.Image} className="small-img" />
-            </div>
+              <img src={props.selectedPizza.Image} className="small-img" alt={props.selectedPizza.name}/>
+            </div> 
             <h5 className="head-name">{props.selectedPizza.name}</h5>
             <div>
               <select onChange={props.handleChangePrice} className="select">

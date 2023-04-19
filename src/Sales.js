@@ -4,7 +4,7 @@ const Sales = () => {
   const bills = JSON.parse(localStorage.getItem("bills"));
   const TotalSales =
     bills !== null
-      ? [...bills].reverse().map((bill) => {
+      && [...bills].reverse().map((bill) => {
           const productIds = bill.products.map((bill) => bill.product_id);
           const billProducts = productIds.map((productId) => {
             return Data.filter((product) => product.id === productId)[0];
@@ -35,7 +35,7 @@ const Sales = () => {
             </tr>
           );
         })
-      : "";
+      ;
 
   return (
     <div className="sales-parent">
