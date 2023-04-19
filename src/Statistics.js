@@ -78,7 +78,7 @@ const Statistics = () => {
     DateOfTheDayArr &&
     DateOfTheDayArr.map((bill) => bill.products.map((product) => product.total))
       .map(
-        (bill) => bill.length && [...bill].reduce((prev, curr) => prev + curr)
+        (bill) => bill.length > 0 && [...bill].reduce((prev, curr) => prev + curr)
       )
       .reduce((prev, curr) => {
         return Number(prev) + Number(curr) !== false && Number(prev) + Number(curr);
@@ -91,7 +91,7 @@ const Statistics = () => {
     totalMonthEarningsArr
       .map((bill) => bill.products.map((product) => product.total))
       .map(
-        (bill) => bill.length && [...bill].reduce((prev, curr) => prev + curr)
+        (bill) => bill.length > 0 && [...bill].reduce((prev, curr) => prev + curr)
       )
       .reduce((prev, curr) => {
         return Number(prev) + Number(curr) !== false && Number(prev) + Number(curr);
