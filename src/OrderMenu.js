@@ -3,12 +3,12 @@ import { BsPencilSquare } from "react-icons/bs";
 import Data from "./Data";
 const OrderMenu = (props) => {
   const products = props.billProducts.reverse().map((bill) => {
-    const product = Data.filter((product) => product.id == bill.product_id)[0];
+    const product = Data.filter((product) => product.id === bill.product_id)[0];
 
     return (
       <div className="each-order" key={Math.random()}>
         <div>
-          <img src={product.Image} className="menu-img" />
+          <img src={product.Image} className="menu-img" alt={product.name}/>
         </div>
         <div className="order-name-container">
           <p className="order-name">{product.name}</p>

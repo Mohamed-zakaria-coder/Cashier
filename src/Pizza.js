@@ -9,6 +9,7 @@ const Pizza = (props) => {
             src={props.img}
             onClick={() => props.click(props.id)}
             className="pizza-img"
+            alt="pizza-img"
           />
         </div>
         <p>{`${props.name[0].toUpperCase()}${props.name.slice(1)}`}</p>

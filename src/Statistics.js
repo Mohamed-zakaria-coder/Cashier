@@ -147,6 +147,7 @@ const Statistics = () => {
         <img
           src={bestQuantityImg[sortQuantity.length - i]}
           className="best-quantity-img"
+          alt="best-quantity-img"
         />
         <div className="best-total-quantity-name">
           {bestQuantityName[sortQuantity.length - i]}
@@ -170,6 +171,7 @@ const Statistics = () => {
         <img
           src={bestTotalImg[sortTotal.length - i]}
           className="best-total-img"
+          alt="best-total-img"
         />
         <div className="best-total-quantity-name">
           {bestTotalName[sortTotal.length - i]}
