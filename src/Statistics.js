@@ -78,11 +78,11 @@ const Statistics = () => {
     DateOfTheDayArr &&
     DateOfTheDayArr.map((bill) => bill.products.map((product) => product.total))
       .map(
-        (bill) => bill.length > 0 && [...bill].reduce((prev, curr) => prev + curr)
+        (bill) => bill.length > 0 && [...bill].reduce((prev, curr) => prev + curr), 0
       )
       .reduce((prev, curr) => {
         return Number(prev) + Number(curr) !== false && Number(prev) + Number(curr);
-      });
+      }, 0);
   const totalMonthEarningsArr =
     bills &&
     bills.filter((bill) => bill.date >= firstDayCurrentMonth.toISOString());
@@ -91,11 +91,11 @@ const Statistics = () => {
     totalMonthEarningsArr
       .map((bill) => bill.products.map((product) => product.total))
       .map(
-        (bill) => bill.length > 0 && [...bill].reduce((prev, curr) => prev + curr)
+        (bill) => bill.length > 0 && [...bill].reduce((prev, curr) => prev + curr), 0
       )
       .reduce((prev, curr) => {
         return Number(prev) + Number(curr) !== false && Number(prev) + Number(curr);
-      });
+      }, 0);
 
   bills &&
     bills.map((bill) =>
