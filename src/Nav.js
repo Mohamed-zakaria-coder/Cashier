@@ -2,11 +2,9 @@ import React from "react";
 import { FaPizzaSlice } from "react-icons/fa";
 import { AiOutlineHome } from "react-icons/ai";
 import { ImStatsDots } from "react-icons/im";
-import { FcSalesPerformance } from "react-icons/fc";
 import { IoIosStats } from "react-icons/io";
-import { FcStatistics } from "react-icons/fc";
 import { NavLink } from "react-router-dom";
-const Nav = () => {
+const Nav = () => { 
   return ( 
     <div className="parent">
       <div className="nav-container">
