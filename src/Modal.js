@@ -17,7 +17,7 @@ const Modal = (props) => {
                 {props.selectedPizza.size.map((e) => {
                   return (
                     <option key={props.id} value={e.price}>
-                      Size: {e.name}- Price: {e.price}$
+                      Size: {e.name} - {e.price}$
                     </option>
                   );
                 })}
