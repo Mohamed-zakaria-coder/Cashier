@@ -150,7 +150,7 @@ const Statistics = () => {
           alt="best-quantity-img"
         />
         <div className="best-total-quantity-name">
-          {bestQuantityName[sortQuantity.length - i]}
+          {bestQuantityName[sortQuantity.length - i][0].toUpperCase()+bestQuantityName[sortQuantity.length - i].slice(1)}
         </div>
         <div className="sold-units">
           <h3>Sold Units</h3>
@@ -174,12 +174,12 @@ const Statistics = () => {
           alt="best-total-img"
         />
         <div className="best-total-quantity-name">
-          {bestTotalName[sortTotal.length - i]}
+          {bestTotalName[sortTotal.length - i][0].toUpperCase()+bestTotalName[sortTotal.length - i].slice(1)}
         </div>
         <div className="total-profit">
           <h3>Total Profit</h3>
           <h2 className="top-total-quantity-products">
-            {total[total.length - i]}
+            {total[total.length - i]}$
           </h2>
         </div>
       </div>
@@ -255,16 +255,16 @@ const Statistics = () => {
       <div className="total-earnings-parent">
         <div className="total-earnings">
           <div>Total Earnings</div>
-          <div>{totalEarnings > 0 ? `$${totalEarnings}` : 0}</div>
+          <div>{totalEarnings > 0 ? `${totalEarnings}$` : 0}</div>
         </div>
         <div className="total-earnings">
           <div>Month Earnings</div>
-          <div>{totalMonthEarnings > 0 ? `$${totalMonthEarnings}` : 0}</div>
+          <div>{totalMonthEarnings > 0 ? `${totalMonthEarnings}$` : 0}</div>
         </div>
         <div className="total-earnings">
           <div>Today Earnings</div>
           <div>
-            {totalEarningsOfTheDay > 0 ? `$${totalEarningsOfTheDay}` : 0}
+            {totalEarningsOfTheDay > 0 ? `${totalEarningsOfTheDay}$` : 0}
           </div>
         </div>
       </div>

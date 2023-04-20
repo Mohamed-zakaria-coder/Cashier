@@ -11,7 +11,7 @@ const Modal = (props) => {
             <div className="img-container">
               <img src={props.selectedPizza.Image} className="small-img" alt={props.selectedPizza.name}/>
             </div> 
-            <h5 className="head-name">{props.selectedPizza.name}</h5>
+            <h5 className="head-name">{props.selectedPizza.name[0].toUpperCase()+props.selectedPizza.name.slice(1)}</h5>
             <div>
               <select onChange={props.handleChangePrice} className="select">
                 {props.selectedPizza.size.map((e) => {
@@ -30,7 +30,7 @@ const Modal = (props) => {
               </select>
               <div className="total-container">
                 <span className="span-price">
-                  Total = {props.selectedQuantity * props.selectedPrice}
+                  Total = {props.selectedQuantity * props.selectedPrice}$
                 </span>
               </div>
             </div>

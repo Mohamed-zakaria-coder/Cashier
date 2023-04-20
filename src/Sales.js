@@ -13,12 +13,12 @@ const Sales = () => {
             <tr className="table-body" key={Math.random()}>
               <td>
                 {billProducts.map((e) => (
-                  <p className="bill-name">{e.name}</p>
+                  <p className="bill-name">{e.name[0].toUpperCase()+e.name.slice(1)}</p>
                 ))}
               </td>
               <td>
                 {bill.products.map((bill) => (
-                  <p className="bill-price">{bill.price}</p>
+                  <p className="bill-price">{bill.price}$</p>
                 ))}
               </td>
               <td>
@@ -28,7 +28,7 @@ const Sales = () => {
               </td>
               <td>
                 {bill.products.map((bill) => (
-                  <p className="bill-total">{bill.total}</p>
+                  <p className="bill-total">{bill.total}$</p>
                 ))}
               </td>
               <td className="bill-date">{bill.date}</td>
@@ -58,7 +58,7 @@ const Sales = () => {
                     )
                     .reduce((prev, curr) => {
                       return Number(prev) + Number(curr);
-                    }, 0)}
+                    }, 0) + "$"}
               </h3>
             </div>
           </div>{" "}
@@ -66,14 +66,14 @@ const Sales = () => {
             {" "}
             <thead>
               <tr className="table-head">
-                <th>Product Name</th>
-                <th>Product-Price</th>
-                <th>Product Quantity</th>
-                <th>Total - Price</th>
+                <th>Product name</th>
+                <th>Product price</th>
+                <th>Product quantity</th>
+                <th>Total price</th>
                 <th>Date</th>
               </tr>
             </thead>{" "}
-            <tbody> {TotalSales} </tbody>
+            <tbody> {TotalSales}</tbody>
           </table>{" "}
         </>
       ) : (

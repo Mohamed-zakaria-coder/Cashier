@@ -1,11 +1,13 @@
 import React from "react";
 import { FaPizzaSlice } from "react-icons/fa";
 import { AiOutlineHome } from "react-icons/ai";
+import { ImStatsDots } from "react-icons/im";
 import { FcSalesPerformance } from "react-icons/fc";
+import { IoIosStats } from "react-icons/io";
 import { FcStatistics } from "react-icons/fc";
 import { NavLink } from "react-router-dom";
-const Nav = (props) => {
-  return (
+const Nav = () => {
+  return ( 
     <div className="parent">
       <div className="nav-container">
         <FaPizzaSlice className="nav-icon" />
@@ -14,11 +16,11 @@ const Nav = (props) => {
           <div> Menu</div>
         </NavLink>
         <NavLink to="/Sales" className="link-container">
-          <FcSalesPerformance className="icon" />
+          <IoIosStats className="icon" />
           <div>Sales</div>
         </NavLink>
         <NavLink to="/Stats" className="link-container">
-          <FcStatistics className="icon" />
+          <ImStatsDots className="icon" />
           <div>Statistics</div>
         </NavLink>
       </div>
