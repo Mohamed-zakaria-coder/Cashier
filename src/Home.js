@@ -144,6 +144,15 @@ const Home = (props) => {
                   } else {
                     filterProducts(1);
                   }
+                  if (e.target.value.length > 0) {
+                    document
+                      .querySelector(".search-icon")
+                      .classList.add("hide-search-icon");
+                  } else {
+                    document
+                      .querySelector(".search-icon")
+                      .classList.remove("hide-search-icon");
+                  }
                 }}
               />
 
