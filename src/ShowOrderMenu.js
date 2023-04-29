@@ -4,7 +4,8 @@ import { BsPencilSquare } from "react-icons/bs";
 const ShowOrderMenu = (props) => {
   const products = props.billProducts.reverse().map((bill) => {
     const product = Data.filter((product) => product.id === bill.product_id)[0];
-
+    
+    console.log(props.billProducts.length)
     return (
       <div className="each-order" key={Math.random()}>
         <div>
@@ -28,7 +29,7 @@ const ShowOrderMenu = (props) => {
       <div className="menu-header">
         {products.map((product) => product.price)}
         <p>Order Menu</p>
-        <BsPencilSquare className="order-icon" />
+        {/* <BsPencilSquare className="order-icon" /> */}
       </div>
       <div className="menu-content">
         {products}
@@ -47,8 +48,13 @@ const ShowOrderMenu = (props) => {
         <button
           className="charge-btn"
           onClick={() => {
-            props.charge();
+            if(props.billProducts.length > 0){
+              props.charge();
             props.saveInLocal();
+            }else{
+              return false
+            }
+            
           }}
         >
           Charge $

@@ -1,5 +1,5 @@
 import React from "react";
-import OrderMenu from "./OrderMenu";
+// import OrderMenu from "./OrderMenu";
 import Modal from "./Modal";
 import { FiSearch } from "react-icons/fi";
 import Data, { categories } from "./Data";
@@ -165,7 +165,7 @@ const Home = (props) => {
         <TiShoppingCart className="out-line-menu" />
       </div>
 
-      {showOrderMenu ? (
+      {/* {showOrderMenu ? (
         <div className="ordermenu-parent">
           <OrderMenu
             charge={charge}
@@ -176,7 +176,7 @@ const Home = (props) => {
         </div>
       ) : (
         ""
-      )}
+      )} */}
 
       <div className="show-ordermenu-parent">
         <ShowOrderMenu

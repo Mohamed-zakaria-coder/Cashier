@@ -28,7 +28,7 @@ const OrderMenu = (props) => {
       <div className="menu-header">
         {products.map((product) => product.price)}
         <p>Order Menu</p>
-        <BsPencilSquare className="order-icon" />
+       {/* <BsPencilSquare className="order-icon" />  */}
       </div>
       <div className="menu-content">
         {products}

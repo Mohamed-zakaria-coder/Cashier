@@ -62,6 +62,7 @@ const Sales = () => {
               </h3>
             </div>
           </div>{" "}
+          <div className="table-parent">
           <table className="sales-table">
             {" "}
             <thead>
@@ -75,6 +76,7 @@ const Sales = () => {
             </thead>{" "}
             <tbody> {TotalSales}</tbody>
           </table>{" "}
+          </div>
         </>
       ) : (
         <h2 className="no-bills">There Are No Bills</h2>

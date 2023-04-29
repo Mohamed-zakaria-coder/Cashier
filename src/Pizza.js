@@ -2,12 +2,12 @@ import React from "react";
 
 const Pizza = (props) => {
   return (
-    <div className="pizza-parent">
+    <div className="pizza-parent" onClick={() => props.click(props.id)}>
       <div className="each">
         <div className="img-container">
           <img
             src={props.img}
-            onClick={() => props.click(props.id)}
+            
             className="pizza-img"
             alt="pizza-img"
           />

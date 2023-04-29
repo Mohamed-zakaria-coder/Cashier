@@ -170,10 +170,15 @@ p {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
+  
 }
 .pizza-parent .each p {
-  margin-top: 5px;
+  margin-top: 5px; 
   margin-bottom: 5px;
+}
+.pizza-parent .each img{
+  cursor: pointer;
 }
 .choose-sort-parent {
   display: flex;
@@ -286,6 +291,10 @@ p {
   /* background-color: #eee; */
   box-shadow: 0 0 4px #ddd;
   border-radius: 15px;
+  cursor: pointer;
+}
+.select{
+  cursor: pointer;
 }
 .btn-total {
   background-color: black;
@@ -315,6 +324,7 @@ p {
   font-size: 17px;
   border: none;
   border-radius: 15px;
+  cursor: pointer;
 }
 
 /* End Modal */
@@ -364,8 +374,11 @@ p {
   width: 100%;
   height: 100vh;
 }
+.table-parent{
+  overflow-x: scroll;
+}
 .sales-table {
-  width: 95%;
+  width: 100%;
   height: 30%;
   text-align: center;
   font-size: 22px;
@@ -378,7 +391,7 @@ p {
   color: white;
 }
 .table-body {
-  background-color: #eeeeee;
+  background-color: #eeeeee3b;
 }
 .sales-caption {
   padding: 5px;
@@ -400,7 +413,7 @@ p {
   text-align: center;
 }
 tr:nth-child(even) {
-  background-color: #ddd;
+  background-color: #dddddd69;
 }
 
 .table-head {
@@ -414,10 +427,10 @@ tr td {
 .bill-quantity,
 .bill-total,
 .bill-name {
-  border: 2px solid #ddd;
+  border: 2px solid #dddddd69;
   padding: 3px;
   margin: 8px;
-  border: 1px solid #404040;
+
 }
 
 /* End Sales */
